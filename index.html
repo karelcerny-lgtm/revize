@@ -15,7 +15,7 @@
         body { font-size: 8.5pt; line-height: 1.1; font-family: sans-serif; }
         .section-title { font-weight: bold; background-color: #f3f4f6; padding: 1px 8px; margin-top: 2px; border-left: 3px solid #000; font-size: 0.75rem; }
         textarea { width: 100%; border: 1px solid #d1d5db; border-radius: 4px; padding: 2px; font-size: 0.75rem; line-height: 1.1; background-color: #fff; }
-        input[type="text"], input[type="date"] { border: 1px solid #d1d5db; border-radius: 4px; padding: 1px 4px; font-size: 0.75rem; background-color: #fff; }
+        input[type="text"], input[type="date"], input[type="email"], input[type="tel"] { border: 1px solid #d1d5db; border-radius: 4px; padding: 1px 4px; font-size: 0.75rem; background-color: #fff; }
         label { font-size: 0.6rem; font-weight: bold; text-transform: uppercase; display: block; margin-top: 2px; color: #4b5563; }
         .fixed-data { background-color: #f9fafb; border: 1px solid #e5e7eb; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; }
         .footer-text { font-size: 7.5pt; line-height: 1.1; }
@@ -41,7 +41,7 @@
             <div class="grid grid-cols-3 gap-2">
                 <div>
                     <label>Evidenční číslo:</label>
-                    <input type="text" value="0126" class="w-full font-bold text-base">
+                    <input type="text" id="ev_cislo" value="0126" class="w-full font-bold text-base">
                 </div>
                 <div>
                     <label>Datum vystavení:</label>
@@ -65,30 +65,38 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-2 gap-2">
+            <h2 class="section-title uppercase">Údaje o zákazníkovi (Objednatel)</h2>
+            <div class="grid grid-cols-2 gap-4">
                 <div>
-                    <label>OBJEDNAVATEL:</label>
-                    <textarea rows="2">Liška Vít, tel: 723831447, Koněvova 1789/30, Ústí nad Labem</textarea>
+                    <label>Jméno a příjmení:</label>
+                    <input type="text" id="db_jmeno" value="Liška Vít" class="w-full font-bold">
+                    
+                    <label>Adresa trvalého bydliště:</label>
+                    <textarea id="db_trvale" rows="2">Koněvova 1789/30, 40001 Ústí nad Labem</textarea>
                 </div>
                 <div>
-                    <label>REVIZE PROVEDENA U:</label>
-                    <textarea rows="2">Liška Vít, Koněvova 1789/30, 2. patro</textarea>
+                    <label>Telefonní spojení:</label>
+                    <input type="tel" id="db_tel" value="723831447" class="w-full">
+                    
+                    <label>E-mail:</label>
+                    <input type="email" id="db_email" value="danutaliskova@gmail.com" class="w-full">
                 </div>
             </div>
 
-            <div>
-                <label>ADRESA OBJEKTU REVIZE:</label>
-                <input type="text" value="40001 Ústí nad Labem, Koněvova 1789/30" class="w-full">
+            <h2 class="section-title uppercase">Místo provedení revize</h2>
+            <div class="grid grid-cols-1 gap-1">
+                <label>Adresa objektu (ulice, č.p., obec, patro, byt):</label>
+                <textarea id="db_misto_revize" rows="2">Koněvova 1789/30, 2. patro, 40001 Ústí nad Labem</textarea>
             </div>
 
+            <h2 class="section-title uppercase">Specifikace spalinové cesty</h2>
             <div>
-                <label>Specifikace spalinové cesty, paliva a spotřebiče:</label>
                 <textarea rows="2">Systémový odvod spalin RICOM GAS koaxiální včetně kouřovodu a spotřebiče. Spotřebič typu C. Palivo plynné. Luna Compact 24. Výkon 24kW.</textarea>
             </div>
 
             <div class="grid grid-cols-2 gap-2">
                 <div>
-                    <label>Určení výrobce komponentů a IČ:</label>
+                    <label>Výrobce komponentů a IČ:</label>
                     <input type="text" value="RICOM gas s.r.o., Na Bělidle 1135, Liberec, IČO 25414852" class="w-full text-xs">
                 </div>
                 <div>
@@ -113,7 +121,7 @@
             </div>
         </div>
 
-        <div class="mt-2 border-t-2 border-black pt-1">
+        <div class="mt-1 border-t-2 border-black pt-1">
             <div class="flex justify-between items-end">
                 <div class="w-2/3">
                     <h2 class="font-bold text-sm uppercase italic">ZÁVĚR</h2>
@@ -142,7 +150,7 @@
                 </div>
             </div>
 
-            <div class="mt-2 text-center border-t border-gray-300 pt-2">
+            <div class="mt-2 text-center border-t border-gray-300 pt-1">
                 <p class="footer-text font-black uppercase">
                     NEDÍLNOU SOUČÁSTÍ TÉTO ZPRÁVY O REVIZI SPALINOVÉ CESTY JE TECHNICKÝ PROTOKOL REVIZE SPALINOVÉ CESTY.
                 </p>
