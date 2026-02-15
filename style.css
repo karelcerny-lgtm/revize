@@ -1,0 +1,65 @@
+/* Vlastní stylizace pro systém revizí spalinových cest */
+
+:root {
+    --primary-blue: #2563eb;
+    --success-green: #10b981;
+    --danger-red: #ef4444;
+}
+
+/* Jemné animace pro interaktivní prvky */
+input, select {
+    transition: all 0.2s ease-in-out;
+}
+
+input:focus, select:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* Styl pro simulaci kulatého razítka z revizní zprávy */
+.stamp-sim {
+    width: 120px;
+    height: 120px;
+    border: 2px solid rgba(239, 68, 68, 0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 10px;
+    color: rgba(239, 68, 68, 0.8);
+    transform: rotate(-15deg);
+    font-weight: bold;
+    text-transform: uppercase;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Nastavení pro tisk - aby revizní zpráva vypadala na papíře skvěle */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+    .container {
+        box-shadow: none;
+        max-width: 100%;
+        margin: 0;
+    }
+    button, .no-print {
+        display: none !important;
+    }
+    input, select {
+        border: none !important;
+        background: transparent !important;
+        padding: 0 !important;
+        appearance: none;
+    }
+}
+
+/* Vzhled sekcí podle technického protokolu */
+section h2 {
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
