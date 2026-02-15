@@ -27,7 +27,7 @@
         .text-active { font-weight: 900; color: black; text-decoration: underline; font-size: 1rem; }
         .text-inactive { color: #d1d5db; text-decoration: line-through; font-weight: normal; font-size: 0.75rem; }
         .stamp-container { text-align: center; font-size: 7pt; font-weight: bold; }
-        .stamp-img { width: 120px; height: auto; margin: 0 auto; }
+        .stamp-img { width: 130px; height: auto; margin: 0 auto; display: block; }
     </style>
 </head>
 <body class="bg-gray-100 p-1">
@@ -36,115 +36,115 @@
         
         <div class="flex-grow space-y-1">
             <div class="text-center border-b-2 border-black pb-1 mb-1">
-                <h1 class="text-lg font-black uppercase tracking-tight">Zpráva o revizi spalinové cesty</h1> [cite: 1, 2]
+                <h1 class="text-lg font-black uppercase tracking-tight">Zpráva o revizi spalinové cesty</h1>
             </div>
 
             <div class="grid grid-cols-3 gap-2">
                 <div>
                     <label>Evidenční číslo:</label>
-                    <input type="text" value="0126" class="w-full font-bold text-base"> [cite: 4]
+                    <input type="text" value="0126" class="w-full font-bold text-base">
                 </div>
                 <div>
                     <label>Datum vystavení:</label>
-                    <input type="date" id="datumVystaveni" class="w-full"> [cite: 5]
+                    <input type="date" id="datumVystaveni" class="w-full">
                 </div>
                 <div>
                     <label>Datum revize:</label>
-                    <input type="date" id="datumRevize" class="w-full"> [cite: 6]
+                    <input type="date" id="datumRevize" class="w-full">
                 </div>
             </div>
 
-            <h2 class="section-title uppercase">Údaje o revizním technikovi spalinových cest</h2> [cite: 7]
+            <h2 class="section-title uppercase">Údaje o revizním technikovi spalinových cest</h2>
             <div class="fixed-data grid grid-cols-2 gap-2">
                 <div>
-                    <p class="font-bold uppercase text-[8pt]">Kominictví Černý s.r.o.</p> [cite: 9]
-                    <p>Na Spádu 320/6, 40011 Ústí nad Labem | IČO: 08555583</p> [cite: 9]
+                    <p class="font-bold uppercase text-[8pt]">Kominictví Černý s.r.o.</p>
+                    <p>Na Spádu 320/6, 40011 Ústí nad Labem | IČO: 08555583</p>
                 </div>
                 <div class="text-right">
-                    <p class="font-bold text-[8pt]">Černý Karel</p> [cite: 10, 30, 31]
-                    <p>Osvědčení: MV_2204464/36-024-H | Tel: 730 610 120</p> [cite: 11, 33]
+                    <p class="font-bold text-[8pt]">Černý Karel</p>
+                    <p>Osvědčení: MV_2204464/36-024-H | Tel: 730 610 120</p>
                 </div>
             </div>
 
             <div class="grid grid-cols-2 gap-2">
                 <div>
                     <label>OBJEDNAVATEL:</label>
-                    <textarea rows="2">Liška Vít, tel: 723831447, email: danutaliskova@gmail.com, 40001 Ústí nad Labem, Koněvova 1789/30</textarea> [cite: 12, 13]
+                    <textarea rows="2">Liška Vít, tel: 723831447, Koněvova 1789/30, Ústí nad Labem</textarea>
                 </div>
                 <div>
                     <label>REVIZE PROVEDENA U:</label>
-                    <textarea rows="2">Liška Vít, Koněvova 1789/30, 2. patro</textarea> [cite: 14]
+                    <textarea rows="2">Liška Vít, Koněvova 1789/30, 2. patro</textarea>
                 </div>
             </div>
 
             <div>
                 <label>ADRESA OBJEKTU REVIZE:</label>
-                <input type="text" value="40001 Ústí nad Labem, Koněvova 1789/30" class="w-full"> [cite: 15, 16]
+                <input type="text" value="40001 Ústí nad Labem, Koněvova 1789/30" class="w-full">
             </div>
 
             <div>
                 <label>Specifikace spalinové cesty, paliva a spotřebiče:</label>
-                <textarea rows="2">Systémový odvod spalin RICOM GAS koaxiální včetně kouřovodu a spotřebiče. Spotřebič typu C. Palivo plynné. Luna Compact 24. Výkon 24kW.</textarea> [cite: 17, 18]
+                <textarea rows="2">Systémový odvod spalin RICOM GAS koaxiální včetně kouřovodu a spotřebiče. Spotřebič typu C. Palivo plynné. Luna Compact 24. Výkon 24kW.</textarea>
             </div>
 
             <div class="grid grid-cols-2 gap-2">
                 <div>
                     <label>Určení výrobce komponentů a IČ:</label>
-                    <input type="text" value="RICOM gas s.r.o., Na Bělidle 1135, Liberec, IČO 25414852" class="w-full text-xs"> [cite: 19]
+                    <input type="text" value="RICOM gas s.r.o., Na Bělidle 1135, Liberec, IČO 25414852" class="w-full text-xs">
                 </div>
                 <div>
                     <label>Doklad o posouzení o vlastnostech:</label>
-                    <input type="text" value="Prohlášení o vlastnostech č. 113" class="w-full text-xs"> [cite: 20]
+                    <input type="text" value="Prohlášení o vlastnostech č. 113" class="w-full text-xs">
                 </div>
             </div>
 
             <div class="grid grid-cols-3 gap-2 italic">
                 <div>
                     <label>Nedostatky (odstraněné):</label>
-                    <input type="text" value="Žádné" class="w-full"> [cite: 21]
+                    <input type="text" value="Žádné" class="w-full">
                 </div>
                 <div>
                     <label>Nedostatky (neodstraněné):</label>
-                    <input type="text" value="Žádné" class="w-full"> [cite: 22]
+                    <input type="text" value="Žádné" class="w-full">
                 </div>
                 <div>
                     <label>Termín odstranění:</label>
-                    <input type="text" value="Žádný termín" class="w-full"> [cite: 22]
+                    <input type="text" value="Žádný termín" class="w-full">
                 </div>
             </div>
         </div>
 
-        <div class="mt-2 border-t-2 border-black pt-2 flex justify-between items-start">
-            <div class="flex-grow">
-                <h2 class="font-bold text-sm uppercase italic mb-1">ZÁVĚR</h2> [cite: 23]
-                <p class="text-[8pt] font-bold uppercase mb-2">Spalinová cesta z hlediska bezpečného a spolehlivého provozu:</p> [cite: 24]
+        <div class="mt-2 border-t-2 border-black pt-2 flex justify-between items-end">
+            <div class="w-2/3">
+                <h2 class="font-bold text-sm uppercase italic mb-1">ZÁVĚR</h2>
+                <p class="text-[8pt] font-bold uppercase mb-2">Spalinová cesta z hlediska bezpečného a spolehlivého provozu:</p>
                 
                 <div class="space-y-1 ml-4" id="zaviraciSekce">
                     <div class="vysledek-radek" onclick="vyberVysledek('vyhovuje')">
                         <span class="dot" id="dot-vyhovuje"></span>
-                        <span id="text-vyhovuje">VYHOVUJE</span> [cite: 25]
+                        <span id="text-vyhovuje">VYHOVUJE</span>
                     </div>
                     <div class="vysledek-radek" onclick="vyberVysledek('podminecne')">
                         <span class="dot" id="dot-podminecne"></span>
-                        <span id="text-podminecne">VYHOVUJE PO ODSTRANĚNÍ ZJIŠTĚNÝCH NEDOSTATKŮ</span> [cite: 26]
+                        <span id="text-podminecne">VYHOVUJE PO ODSTRANĚNÍ ZJIŠTĚNÝCH NEDOSTATKŮ</span>
                     </div>
                     <div class="vysledek-radek" onclick="vyberVysledek('nevyhovuje')">
                         <span class="dot" id="dot-nevyhovuje"></span>
-                        <span id="text-nevyhovuje">NEVYHOVUJE</span> [cite: 27]
+                        <span id="text-nevyhovuje">NEVYHOVUJE</span>
                     </div>
                 </div>
-                <p class="text-[7pt] italic text-gray-500 mt-1">*) Nehodící se škrtne</p> [cite: 28]
+                <p class="text-[7pt] italic text-gray-500 mt-1">*) Nehodící se škrtne</p>
             </div>
 
             <div class="stamp-container w-1/3">
-                <img src="podpis-revize-komin.png" alt="Podpis a razítko" class="stamp-img"> 
-                <p class="uppercase mt-1">Podpis a razítko oprávněné osoby</p> 
+                <img src="podpis-revize-komin.png" alt="Podpis a razítko" class="stamp-img">
+                <p class="uppercase mt-1 tracking-tighter">Podpis a razítko oprávněné osoby</p>
             </div>
         </div>
 
         <div class="mt-4 text-center border-t border-black pt-2">
             <p class="footer-text font-bold uppercase">
-                NEDÍLNOU SOUČÁSTÍ TÉTO ZPRÁVY O REVIZI SPALINOVÉ CESTY JE TECHNICKÝ PROTOKOL REVIZE SPALINOVÉ CESTY. [cite: 29]
+                NEDÍLNOU SOUČÁSTÍ TÉTO ZPRÁVY O REVIZI SPALINOVÉ CESTY JE TECHNICKÝ PROTOKOL REVIZE SPALINOVÉ CESTY.
             </p>
             <div class="no-print mt-2">
                 <button onclick="window.print()" class="bg-black text-white px-8 py-2 rounded-full font-bold uppercase text-[9px] hover:bg-gray-800 transition">Vytisknout Titulní stranu</button>
@@ -155,11 +155,9 @@
     <script>
         function vyberVysledek(typ) {
             const stavy = ['vyhovuje', 'podminecne', 'nevyhovuje'];
-            
             stavy.forEach(s => {
                 const dot = document.getElementById(`dot-${s}`);
                 const text = document.getElementById(`text-${s}`);
-                
                 if (s === typ) {
                     dot.classList.add('dot-active');
                     text.className = 'text-active uppercase';
@@ -169,7 +167,6 @@
                 }
             });
         }
-
         window.onload = function() {
             const dnes = new Date().toISOString().split('T')[0];
             document.getElementById('datumVystaveni').value = dnes;
