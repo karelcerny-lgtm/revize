@@ -12,7 +12,7 @@
             .container { box-shadow: none; border: none; width: 100%; max-width: 100%; margin: 0; padding: 0.1cm; }
             textarea, input { border: none !important; outline: none !important; resize: none; background: transparent !important; }
         }
-        body { font-size: 8.5pt; line-height: 1.15; font-family: sans-serif; }
+        body { font-size: 8.5pt; line-height: 1.1; font-family: sans-serif; }
         .section-title { font-weight: bold; background-color: #f3f4f6; padding: 1px 8px; margin-top: 2px; border-left: 3px solid #000; font-size: 0.75rem; }
         textarea { width: 100%; border: 1px solid #d1d5db; border-radius: 4px; padding: 2px; font-size: 0.75rem; line-height: 1.1; background-color: #fff; }
         input[type="text"], input[type="date"] { border: 1px solid #d1d5db; border-radius: 4px; padding: 1px 4px; font-size: 0.75rem; background-color: #fff; }
@@ -20,21 +20,20 @@
         .fixed-data { background-color: #f9fafb; border: 1px solid #e5e7eb; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; }
         .footer-text { font-size: 7.5pt; line-height: 1.1; }
         
-        /* Styly pro Závěr a Podpis */
-        .vysledek-radek { display: flex; align-items: center; gap: 8px; cursor: pointer; text-transform: uppercase; margin-bottom: 2px; }
+        .vysledek-radek { display: flex; align-items: center; gap: 8px; cursor: pointer; text-transform: uppercase; margin-bottom: 1px; }
         .dot { width: 10px; height: 10px; border: 1px solid black; border-radius: 50%; display: inline-block; }
         .dot-active { background-color: black; }
-        .text-active { font-weight: 900; color: black; text-decoration: underline; font-size: 1rem; }
-        .text-inactive { color: #d1d5db; text-decoration: line-through; font-weight: normal; font-size: 0.75rem; }
-        .stamp-container { text-align: center; font-size: 7pt; font-weight: bold; }
-        .stamp-img { width: 130px; height: auto; margin: 0 auto; display: block; }
+        .text-active { font-weight: 900; color: black; text-decoration: underline; font-size: 0.95rem; }
+        .text-inactive { color: #d1d5db; text-decoration: line-through; font-weight: normal; font-size: 0.7rem; }
+        .stamp-container { text-align: center; font-size: 6.5pt; font-weight: bold; }
+        .stamp-img { width: 125px; height: auto; margin: 0 auto; display: block; }
     </style>
 </head>
 <body class="bg-gray-100 p-1">
 
-    <div class="container mx-auto bg-white shadow-2xl border border-gray-300 p-6 max-w-4xl min-h-[28.5cm] flex flex-col">
+    <div class="container mx-auto bg-white shadow-2xl border border-gray-300 p-5 max-w-4xl min-h-[28cm] flex flex-col">
         
-        <div class="flex-grow space-y-1">
+        <div class="space-y-1">
             <div class="text-center border-b-2 border-black pb-1 mb-1">
                 <h1 class="text-lg font-black uppercase tracking-tight">Zpráva o revizi spalinové cesty</h1>
             </div>
@@ -114,40 +113,42 @@
             </div>
         </div>
 
-        <div class="mt-2 border-t-2 border-black pt-2 flex justify-between items-end">
-            <div class="w-2/3">
-                <h2 class="font-bold text-sm uppercase italic mb-1">ZÁVĚR</h2>
-                <p class="text-[8pt] font-bold uppercase mb-2">Spalinová cesta z hlediska bezpečného a spolehlivého provozu:</p>
-                
-                <div class="space-y-1 ml-4" id="zaviraciSekce">
-                    <div class="vysledek-radek" onclick="vyberVysledek('vyhovuje')">
-                        <span class="dot" id="dot-vyhovuje"></span>
-                        <span id="text-vyhovuje">VYHOVUJE</span>
+        <div class="mt-2 border-t-2 border-black pt-1">
+            <div class="flex justify-between items-end">
+                <div class="w-2/3">
+                    <h2 class="font-bold text-sm uppercase italic">ZÁVĚR</h2>
+                    <p class="text-[7.5pt] font-bold uppercase mb-1">Spalinová cesta z hlediska bezpečného a spolehlivého provozu:</p>
+                    
+                    <div class="space-y-0.5 ml-4" id="zaviraciSekce">
+                        <div class="vysledek-radek" onclick="vyberVysledek('vyhovuje')">
+                            <span class="dot" id="dot-vyhovuje"></span>
+                            <span id="text-vyhovuje">VYHOVUJE</span>
+                        </div>
+                        <div class="vysledek-radek" onclick="vyberVysledek('podminecne')">
+                            <span class="dot" id="dot-podminecne"></span>
+                            <span id="text-podminecne">VYHOVUJE PO ODSTRANĚNÍ ZJIŠTĚNÝCH NEDOSTATKŮ</span>
+                        </div>
+                        <div class="vysledek-radek" onclick="vyberVysledek('nevyhovuje')">
+                            <span class="dot" id="dot-nevyhovuje"></span>
+                            <span id="text-nevyhovuje">NEVYHOVUJE</span>
+                        </div>
                     </div>
-                    <div class="vysledek-radek" onclick="vyberVysledek('podminecne')">
-                        <span class="dot" id="dot-podminecne"></span>
-                        <span id="text-podminecne">VYHOVUJE PO ODSTRANĚNÍ ZJIŠTĚNÝCH NEDOSTATKŮ</span>
-                    </div>
-                    <div class="vysledek-radek" onclick="vyberVysledek('nevyhovuje')">
-                        <span class="dot" id="dot-nevyhovuje"></span>
-                        <span id="text-nevyhovuje">NEVYHOVUJE</span>
-                    </div>
+                    <p class="text-[6.5pt] italic text-gray-500 mt-1">*) Nehodící se škrtne</p>
                 </div>
-                <p class="text-[7pt] italic text-gray-500 mt-1">*) Nehodící se škrtne</p>
+
+                <div class="stamp-container w-1/3">
+                    <img src="podpis-revize-komin.png" alt="Podpis a razítko" class="stamp-img">
+                    <p class="uppercase mt-1 tracking-tighter">Podpis a razítko oprávněné osoby</p>
+                </div>
             </div>
 
-            <div class="stamp-container w-1/3">
-                <img src="podpis-revize-komin.png" alt="Podpis a razítko" class="stamp-img">
-                <p class="uppercase mt-1 tracking-tighter">Podpis a razítko oprávněné osoby</p>
-            </div>
-        </div>
-
-        <div class="mt-4 text-center border-t border-black pt-2">
-            <p class="footer-text font-bold uppercase">
-                NEDÍLNOU SOUČÁSTÍ TÉTO ZPRÁVY O REVIZI SPALINOVÉ CESTY JE TECHNICKÝ PROTOKOL REVIZE SPALINOVÉ CESTY.
-            </p>
-            <div class="no-print mt-2">
-                <button onclick="window.print()" class="bg-black text-white px-8 py-2 rounded-full font-bold uppercase text-[9px] hover:bg-gray-800 transition">Vytisknout Titulní stranu</button>
+            <div class="mt-2 text-center border-t border-gray-300 pt-2">
+                <p class="footer-text font-black uppercase">
+                    NEDÍLNOU SOUČÁSTÍ TÉTO ZPRÁVY O REVIZI SPALINOVÉ CESTY JE TECHNICKÝ PROTOKOL REVIZE SPALINOVÉ CESTY.
+                </p>
+                <div class="no-print mt-2">
+                    <button onclick="window.print()" class="bg-black text-white px-8 py-1.5 rounded-full font-bold uppercase text-[9px] hover:bg-gray-800 transition">Vytisknout zprávu</button>
+                </div>
             </div>
         </div>
     </div>
