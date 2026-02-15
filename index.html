@@ -3,32 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zpráva o revizi spalinové cesty - Strana 1</title>
+    <title>Zpráva o revizi spalinové cesty - Titulní strana</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @media print {
             .no-print { display: none; }
-            body { background: white; font-size: 10pt; margin: 0; padding: 0; }
-            .container { box-shadow: none; border: none; width: 100%; max-width: 100%; margin: 0; padding: 0.5cm; }
+            body { background: white; font-size: 9pt; margin: 0; padding: 0; }
+            .container { box-shadow: none; border: none; width: 100%; max-width: 100%; margin: 0; padding: 0.3cm; }
             textarea, input { border: none !important; outline: none !important; resize: none; background: transparent !important; }
         }
-        .section-title { font-weight: bold; background-color: #f3f4f6; padding: 2px 8px; margin-top: 8px; border-left: 4px solid #000; font-size: 0.85rem; }
-        textarea { width: 100%; border: 1px solid #d1d5db; border-radius: 4px; padding: 4px; font-size: 0.85rem; line-height: 1.3; background-color: #fff; }
-        input[type="text"], input[type="date"] { border: 1px solid #d1d5db; border-radius: 4px; padding: 3px; font-size: 0.85rem; background-color: #fff; }
-        label { font-size: 0.7rem; font-weight: bold; text-transform: uppercase; display: block; margin-top: 5px; color: #374151; }
-        .fixed-data { background-color: #f9fafb; border: 1px solid #e5e7eb; padding: 8px; border-radius: 4px; font-size: 0.8rem; line-height: 1.4; }
+        /* Celkové zmenšení fontu */
+        body { font-size: 9pt; }
+        .section-title { font-weight: bold; background-color: #f3f4f6; padding: 2px 8px; margin-top: 4px; border-left: 4px solid #000; font-size: 0.8rem; }
+        textarea { width: 100%; border: 1px solid #d1d5db; border-radius: 4px; padding: 3px; font-size: 0.8rem; line-height: 1.2; background-color: #fff; }
+        input[type="text"], input[type="date"] { border: 1px solid #d1d5db; border-radius: 4px; padding: 2px; font-size: 0.8rem; background-color: #fff; }
+        label { font-size: 0.65rem; font-weight: bold; text-transform: uppercase; display: block; margin-top: 3px; color: #374151; }
+        .fixed-data { background-color: #f9fafb; border: 1px solid #e5e7eb; padding: 6px; border-radius: 4px; font-size: 0.75rem; line-height: 1.3; }
+        .footer-text { font-size: 8pt; line-height: 1.2; }
     </style>
 </head>
-<body class="bg-gray-100 p-4">
+<body class="bg-gray-100 p-2">
 
-    <div class="container mx-auto bg-white shadow-2xl border border-gray-300 p-8 max-w-4xl min-h-[29cm] flex flex-col justify-between">
+    <div class="container mx-auto bg-white shadow-2xl border border-gray-300 p-6 max-w-4xl min-h-[28cm] flex flex-col justify-between">
         
-        <div class="space-y-3">
-            <div class="text-center border-b-4 border-black pb-2 mb-4">
-                <h1 class="text-2xl font-black uppercase">Zpráva o revizi spalinové cesty</h1>
+        <div class="space-y-2">
+            <div class="text-center border-b-2 border-black pb-1 mb-2">
+                <h1 class="text-xl font-black uppercase">Zpráva o revizi spalinové cesty</h1>
             </div>
 
-            <div class="grid grid-cols-2 gap-6">
+            <div class="grid grid-cols-2 gap-4">
                 <div>
                     <label>Číslo zprávy:</label>
                     <input type="text" value="77437671" class="w-full font-bold">
@@ -39,7 +42,7 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-2 gap-6">
+            <div class="grid grid-cols-2 gap-4">
                 <div>
                     <label>Datum vystavení zprávy:</label>
                     <input type="date" id="datumVystaveni" class="w-full">
@@ -51,87 +54,91 @@
             </div>
 
             <h2 class="section-title uppercase">Údaje o revizním technikovi spalinových cest</h2>
-            <div class="fixed-data grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="fixed-data grid grid-cols-2 gap-2">
                 <div>
                     <p class="font-bold">Kominictví Černý s.r.o.</p>
                     <p>Na Spádu 320/6, 40011 Ústí nad Labem</p>
-                    <p>IČO: 08555583, DIČ: CZ08555583</p>
+                    <p>IČO: 08555583</p>
                 </div>
                 <div class="text-right">
                     <p class="font-bold">Černý Karel</p>
                     <p>Osvědčení: MV_2204464/36-024-H</p>
-                    <p>Tel: 730 610 120, email: cerny@topeni-usti.cz</p>
+                    <p>Tel: 730 610 120</p>
                 </div>
             </div>
 
-            <div class="grid grid-cols-2 gap-6">
+            <div class="grid grid-cols-2 gap-4">
                 <div>
                     <label>OBJEDNAVATEL:</label>
-                    <textarea rows="2">Liška Vít, tel: 723831447, email: danutaliskova@gmail.com, 40001 Ústí nad Labem, Koněvova 1789/30</textarea>
+                    <textarea rows="2">Liška Vít, tel: 723831447, Koněvova 1789/30, Ústí nad Labem</textarea>
                 </div>
                 <div>
                     <label>REVIZE PROVEDENA U:</label>
-                    <textarea rows="2">Liška Vít, 40001 Ústí nad Labem, Koněvova 1789/30, 2. patro</textarea>
+                    <textarea rows="2">Liška Vít, Koněvova 1789/30, 2. patro</textarea>
                 </div>
             </div>
 
             <div>
-                <label>ADRESA OBJEKTU, ve kterém byla provedena revize:</label>
+                <label>ADRESA OBJEKTU:</label>
                 <input type="text" value="40001 Ústí nad Labem, Koněvova 1789/30" class="w-full">
             </div>
 
             <div>
                 <label>Specifikace spalinové cesty, paliva a spotřebiče:</label>
-                <textarea rows="3">Systémový odvod spalin venkovní stěnou RICOM GAS koaxiální včetně kouřovodu a spotřebiče. Spotřebič typu C. Palivo plynné. Luna Compact 24. Výkon 24kW.</textarea>
+                <textarea rows="2">Systémový odvod spalin RICOM GAS koaxiální. Spotřebič typu C. Palivo plynné. Luna Compact 24. Výkon 24kW.</textarea>
             </div>
 
             <div class="grid grid-cols-2 gap-4">
                 <div>
                     <label>Výrobce komponentů a IČ:</label>
-                    <textarea rows="1">RICOM gas s.r.o., Na Bělidle 1135, Liberec, IČO 25414852</textarea>
+                    <input type="text" value="RICOM gas s.r.o., IČO 25414852" class="w-full">
                 </div>
                 <div>
                     <label>Doklad o vlastnostech:</label>
-                    <textarea rows="1">Prohlášení o vlastnostech č. 113</textarea>
+                    <input type="text" value="Prohlášení o vlastnostech č. 113" class="w-full">
                 </div>
             </div>
 
             <div class="grid grid-cols-3 gap-2">
                 <div>
                     <label>Nedostatky (odstraněné):</label>
-                    <input type="text" value="Žádné" class="w-full text-xs">
+                    <input type="text" value="Žádné" class="w-full">
                 </div>
                 <div>
                     <label>Nedostatky (neodstraněné):</label>
-                    <input type="text" value="Žádné" class="w-full text-xs">
+                    <input type="text" value="Žádné" class="w-full">
                 </div>
                 <div>
                     <label>Termín odstranění:</label>
-                    <input type="text" value="Žádný termín" class="w-full text-xs">
+                    <input type="text" value="Žádný termín" class="w-full">
                 </div>
             </div>
         </div>
 
-        <div id="zaviraciBlok" class="border-4 border-black p-4 text-center mt-6 transition-all duration-300">
-            <h2 class="font-bold text-lg uppercase underline mb-1 italic">ZÁVĚR</h2>
-            <p class="text-xs font-bold mb-3 text-gray-700 uppercase tracking-tight">Spalinová cesta z hlediska bezpečného a spolehlivého provozu</p>
-            
-            <div class="flex justify-center gap-4 no-print mb-2">
-                <button type="button" onclick="nastavVysledek('vyhovuje', this)" class="vysledek-btn border-2 border-black px-6 py-1 font-black text-xs uppercase bg-white">VYHOVUJE</button>
-                <button type="button" onclick="nastavVysledek('podminecne', this)" class="vysledek-btn border-2 border-gray-200 px-4 py-1 font-black text-xs uppercase bg-white text-gray-400">VYHOVUJE PO ODSTRANĚNÍ...</button>
-                <button type="button" onclick="nastavVysledek('nevyhovuje', this)" class="vysledek-btn border-2 border-gray-200 px-4 py-1 font-black text-xs uppercase bg-white text-gray-400">NEVYHOVUJE</button>
+        <div class="mt-4">
+            <div id="zaviraciBlok" class="border-2 border-black p-3 text-center transition-all duration-300">
+                <h2 class="font-bold text-base uppercase underline mb-1 italic">ZÁVĚR</h2>
+                <p class="text-[9px] font-bold mb-2 uppercase text-gray-700">Spalinová cesta z hlediska bezpečného a spolehlivého provozu</p>
+                
+                <div class="flex justify-center gap-2 no-print mb-1">
+                    <button type="button" onclick="nastavVysledek('vyhovuje', this)" class="vysledek-btn border border-black px-4 py-1 font-black text-[10px] uppercase bg-white">VYHOVUJE</button>
+                    <button type="button" onclick="nastavVysledek('podminecne', this)" class="vysledek-btn border border-gray-200 px-4 py-1 font-black text-[10px] uppercase bg-white text-gray-400">VYHOVUJE PO ODSTRANĚNÍ...</button>
+                    <button type="button" onclick="nastavVysledek('nevyhovuje', this)" class="vysledek-btn border border-gray-200 px-4 py-1 font-black text-[10px] uppercase bg-white text-gray-400">NEVYHOVUJE</button>
+                </div>
+
+                <div class="hidden print-block">
+                    <p id="tiskVysledek" class="text-xl font-black uppercase underline"></p>
+                </div>
+                <p class="text-[8px] italic text-gray-500">*) Nehodící se škrtne</p>
             </div>
 
-            <div class="hidden print-block">
-                <p id="tiskVysledek" class="text-2xl font-black uppercase underline tracking-widest"></p>
-            </div>
-            <p class="text-[9px] mt-2 italic text-gray-500">*) Nehodící se škrtne</p>
-        </div>
-
-        <div class="flex justify-between items-end mt-4">
-            <p class="text-[9px] font-bold italic uppercase w-2/3">Nedílnou součástí této zprávy o revizi spalinové cesty je technický protokol revize spalinové cesty.</p>
-            <div class="text-center no-print">
-                <button onclick="window.print()" class="bg-blue-600 text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-blue-700 transition uppercase text-xs">Vytisknout Titulní stranu</button>
+            <div class="mt-4 flex flex-col items-center text-center">
+                <p class="footer-text font-bold uppercase border-t border-gray-200 pt-2 w-full">
+                    NEDÍLNOU SOUČÁSTÍ TÉTO ZPRÁVY O REVIZI SPALINOVÉ CESTY JE TECHNICKÝ PROTOKOL REVIZE SPALINOVÉ CESTY.
+                </p>
+                <div class="no-print mt-4">
+                    <button onclick="window.print()" class="bg-blue-600 text-white px-8 py-2 rounded-full font-bold shadow-lg hover:bg-blue-700 uppercase text-[10px]">Vytisknout Titulní stranu</button>
+                </div>
             </div>
         </div>
     </div>
@@ -141,15 +148,12 @@
             const blok = document.getElementById('zaviraciBlok');
             const tisk = document.getElementById('tiskVysledek');
             const tlacitka = document.querySelectorAll('.vysledek-btn');
-
             tlacitka.forEach(btn => {
                 btn.classList.remove('bg-black', 'text-white', 'border-black');
                 btn.classList.add('border-gray-200', 'text-gray-400');
             });
-
             element.classList.remove('border-gray-200', 'text-gray-400');
             element.classList.add('bg-black', 'text-white', 'border-black');
-
             if (typ === 'vyhovuje') {
                 blok.style.backgroundColor = "#f0fdf4";
                 tisk.innerText = "VYHOVUJE";
@@ -161,7 +165,6 @@
                 tisk.innerText = "NEVYHOVUJE";
             }
         }
-
         window.onload = function() {
             const dnes = new Date().toISOString().split('T')[0];
             document.getElementById('datumVystaveni').value = dnes;
