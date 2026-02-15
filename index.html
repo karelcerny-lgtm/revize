@@ -8,59 +8,56 @@
     <style>
         @media print {
             .no-print { display: none; }
-            body { background: white; font-size: 9pt; margin: 0; padding: 0; }
-            .container { box-shadow: none; border: none; width: 100%; max-width: 100%; margin: 0; padding: 0.3cm; }
+            body { background: white; font-size: 8.5pt; margin: 0; padding: 0; }
+            .container { box-shadow: none; border: none; width: 100%; max-width: 100%; margin: 0; padding: 0.2cm; }
             textarea, input { border: none !important; outline: none !important; resize: none; background: transparent !important; }
         }
-        body { font-size: 9pt; }
-        .section-title { font-weight: bold; background-color: #f3f4f6; padding: 2px 8px; margin-top: 4px; border-left: 4px solid #000; font-size: 0.8rem; }
-        textarea { width: 100%; border: 1px solid #d1d5db; border-radius: 4px; padding: 3px; font-size: 0.8rem; line-height: 1.2; background-color: #fff; }
-        input[type="text"], input[type="date"] { border: 1px solid #d1d5db; border-radius: 4px; padding: 2px; font-size: 0.8rem; background-color: #fff; }
-        label { font-size: 0.65rem; font-weight: bold; text-transform: uppercase; display: block; margin-top: 3px; color: #374151; }
-        .fixed-data { background-color: #f9fafb; border: 1px solid #e5e7eb; padding: 6px; border-radius: 4px; font-size: 0.75rem; line-height: 1.3; }
-        .footer-text { font-size: 8pt; line-height: 1.2; }
+        body { font-size: 8.5pt; line-height: 1.2; }
+        .section-title { font-weight: bold; background-color: #f3f4f6; padding: 1px 8px; margin-top: 3px; border-left: 3px solid #000; font-size: 0.75rem; }
+        textarea { width: 100%; border: 1px solid #d1d5db; border-radius: 4px; padding: 2px; font-size: 0.75rem; line-height: 1.1; background-color: #fff; }
+        input[type="text"], input[type="date"] { border: 1px solid #d1d5db; border-radius: 4px; padding: 1px 4px; font-size: 0.75rem; background-color: #fff; }
+        label { font-size: 0.6rem; font-weight: bold; text-transform: uppercase; display: block; margin-top: 2px; color: #4b5563; }
+        .fixed-data { background-color: #f9fafb; border: 1px solid #e5e7eb; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; }
+        .footer-text { font-size: 7.5pt; line-height: 1.1; }
     </style>
 </head>
-<body class="bg-gray-100 p-2">
+<body class="bg-gray-100 p-1">
 
-    <div class="container mx-auto bg-white shadow-2xl border border-gray-300 p-6 max-w-4xl min-h-[28cm] flex flex-col justify-between">
+    <div class="container mx-auto bg-white shadow-2xl border border-gray-300 p-4 max-w-4xl min-h-[27.7cm] flex flex-col">
         
-        <div class="space-y-2">
-            <div class="text-center border-b-2 border-black pb-1 mb-2">
-                <h1 class="text-xl font-black uppercase">Zpráva o revizi spalinové cesty</h1>
+        <div class="flex-grow space-y-1">
+            <div class="text-center border-b-2 border-black pb-1 mb-1">
+                <h1 class="text-lg font-black uppercase">Zpráva o revizi spalinové cesty</h1>
             </div>
 
-            <div class="grid grid-cols-2 gap-4">
-                <div>
+            <div class="grid grid-cols-3 gap-2">
+                <div class="col-span-1">
                     <label>Evidenční číslo:</label>
-                    <input type="text" value="0126" class="w-full font-bold text-lg">
+                    <input type="text" value="0126" class="w-full font-bold text-base">
                 </div>
-                <div class="text-right">
-                    <label>Datum vystavení zprávy:</label>
-                    <input type="date" id="datumVystaveni" class="w-full text-right">
+                <div>
+                    <label>Datum vystavení:</label>
+                    <input type="date" id="datumVystaveni" class="w-full">
+                </div>
+                <div>
+                    <label>Datum revize:</label>
+                    <input type="date" id="datumRevize" class="w-full">
                 </div>
             </div>
 
-            <div>
-                <label>Datum provedení revize spalinové cesty:</label>
-                <input type="date" id="datumRevize" class="w-48">
-            </div>
-
-            <h2 class="section-title uppercase">Údaje o revizním technikovi spalinových cest</h2>
+            <h2 class="section-title uppercase">Údaje o revizním technikovi</h2>
             <div class="fixed-data grid grid-cols-2 gap-2">
                 <div>
-                    <p class="font-bold uppercase">Kominictví Černý s.r.o.</p>
-                    <p>Na Spádu 320/6, 40011 Ústí nad Labem</p>
-                    <p>IČO: 08555583</p>
+                    <p class="font-bold uppercase text-[8pt]">Kominictví Černý s.r.o.</p>
+                    <p>Na Spádu 320/6, 40011 Ústí nad Labem | IČO: 08555583</p>
                 </div>
                 <div class="text-right">
-                    <p class="font-bold">Černý Karel</p>
-                    <p>Osvědčení: MV_2204464/36-024-H</p>
-                    <p>Tel: 730 610 120</p>
+                    <p class="font-bold text-[8pt]">Černý Karel</p>
+                    <p>Osvědčení: MV_2204464/36-024-H | Tel: 730 610 120</p>
                 </div>
             </div>
 
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-2 gap-2">
                 <div>
                     <label>OBJEDNAVATEL:</label>
                     <textarea rows="2">Liška Vít, tel: 723831447, Koněvova 1789/30, Ústí nad Labem</textarea>
@@ -72,7 +69,7 @@
             </div>
 
             <div>
-                <label>ADRESA OBJEKTU, ve kterém byla provedena revize:</label>
+                <label>ADRESA OBJEKTU REVIZE:</label>
                 <input type="text" value="40001 Ústí nad Labem, Koněvova 1789/30" class="w-full">
             </div>
 
@@ -81,9 +78,9 @@
                 <textarea rows="2">Systémový odvod spalin RICOM GAS koaxiální včetně kouřovodu a spotřebiče. Spotřebič typu C. Palivo plynné. Luna Compact 24. Výkon 24kW.</textarea>
             </div>
 
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-2 gap-2">
                 <div>
-                    <label>Určení výrobce komponentů a IČ:</label>
+                    <label>Výrobce komponentů a IČ:</label>
                     <input type="text" value="RICOM gas s.r.o., IČO 25414852" class="w-full">
                 </div>
                 <div>
@@ -108,29 +105,29 @@
             </div>
         </div>
 
-        <div class="mt-4">
-            <div id="zaviraciBlok" class="border-2 border-black p-3 text-center transition-all duration-300">
-                <h2 class="font-bold text-base uppercase underline mb-1 italic">ZÁVĚR</h2>
-                <p class="text-[9px] font-bold mb-2 uppercase text-gray-700">Spalinová cesta z hlediska bezpečného a spolehlivého provozu</p>
+        <div class="mt-2 space-y-2">
+            <div id="zaviraciBlok" class="border-2 border-black p-2 text-center transition-all duration-300 bg-gray-50">
+                <h2 class="font-bold text-sm uppercase underline italic">ZÁVĚR</h2>
+                <p class="text-[8pt] font-bold uppercase text-gray-700">Spalinová cesta z hlediska bezpečného a spolehlivého provozu</p>
                 
-                <div class="flex justify-center gap-2 no-print mb-1">
-                    <button type="button" onclick="nastavVysledek('vyhovuje', this)" class="vysledek-btn border border-black px-4 py-1 font-black text-[10px] uppercase bg-white">VYHOVUJE</button>
-                    <button type="button" onclick="nastavVysledek('podminecne', this)" class="vysledek-btn border border-gray-200 px-4 py-1 font-black text-[10px] uppercase bg-white text-gray-400">VYHOVUJE PO ODSTRANĚNÍ...</button>
-                    <button type="button" onclick="nastavVysledek('nevyhovuje', this)" class="vysledek-btn border border-gray-200 px-4 py-1 font-black text-[10px] uppercase bg-white text-gray-400">NEVYHOVUJE</button>
+                <div class="flex justify-center gap-2 no-print my-1">
+                    <button type="button" onclick="nastavVysledek('vyhovuje', this)" class="vysledek-btn border border-black px-3 py-0.5 font-black text-[9px] uppercase bg-white">VYHOVUJE</button>
+                    <button type="button" onclick="nastavVysledek('podminecne', this)" class="vysledek-btn border border-gray-200 px-3 py-0.5 font-black text-[9px] uppercase bg-white text-gray-400">VYHOVUJE PO ODSTRANĚNÍ...</button>
+                    <button type="button" onclick="nastavVysledek('nevyhovuje', this)" class="vysledek-btn border border-gray-200 px-3 py-0.5 font-black text-[9px] uppercase bg-white text-gray-400">NEVYHOVUJE</button>
                 </div>
 
                 <div class="hidden print-block">
-                    <p id="tiskVysledek" class="text-xl font-black uppercase underline tracking-widest"></p>
+                    <p id="tiskVysledek" class="text-lg font-black uppercase underline tracking-widest"></p>
                 </div>
-                <p class="text-[8px] italic text-gray-500">*) Nehodící se škrtne</p>
+                <p class="text-[7pt] italic text-gray-500">*) Nehodící se škrtne</p>
             </div>
 
-            <div class="mt-4 flex flex-col items-center text-center">
-                <p class="footer-text font-bold uppercase border-t border-gray-200 pt-2 w-full">
+            <div class="text-center">
+                <p class="footer-text font-bold uppercase border-t border-black pt-1">
                     NEDÍLNOU SOUČÁSTÍ TÉTO ZPRÁVY O REVIZI SPALINOVÉ CESTY JE TECHNICKÝ PROTOKOL REVIZE SPALINOVÉ CESTY.
                 </p>
-                <div class="no-print mt-4">
-                    <button onclick="window.print()" class="bg-blue-600 text-white px-8 py-2 rounded-full font-bold shadow-xl hover:bg-blue-700 uppercase text-[10px]">Vytisknout</button>
+                <div class="no-print mt-2">
+                    <button onclick="window.print()" class="bg-blue-600 text-white px-6 py-1.5 rounded-full font-bold shadow hover:bg-blue-700 uppercase text-[9px]">Vytisknout zprávu</button>
                 </div>
             </div>
         </div>
