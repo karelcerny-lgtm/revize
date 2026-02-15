@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Výchozí revize spalinové cesty</title>
+    <title>Výchozí revize spalinové cesty - Karel Černý</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @media print {
@@ -11,84 +11,137 @@
             .no-print { display: none; }
             body { background: white; font-size: 10pt; }
             .container { box-shadow: none; border: none; width: 100%; max-width: 100%; margin: 0; padding: 0; }
-            textarea { border: 1px solid #000 !important; resize: none; }
-            input { border: none !important; }
+            textarea, input { border: none !important; outline: none !important; resize: none; }
         }
         .section-title { font-weight: bold; background-color: #f3f4f6; padding: 4px 8px; margin-top: 10px; border-left: 4px solid #000; font-size: 0.9rem; }
         textarea { width: 100%; border: 1px solid #d1d5db; border-radius: 4px; padding: 6px; font-size: 0.85rem; line-height: 1.4; background-color: #fff; }
         input[type="text"], input[type="date"] { border: 1px solid #d1d5db; border-radius: 4px; padding: 4px; font-size: 0.85rem; background-color: #fff; }
         label { font-size: 0.75rem; font-weight: bold; text-transform: uppercase; display: block; margin-top: 8px; }
-        .fixed-data { background-color: #f9fafb; border: 1px solid #e5e7eb; padding: 10px; border-radius: 4px; font-size: 0.8rem; }
+        .fixed-data { background-color: #f9fafb; border: 1px solid #e5e7eb; padding: 10px; border-radius: 4px; font-size: 0.8rem; line-height: 1.5; }
     </style>
 </head>
 <body class="bg-gray-100 p-4 md:p-8">
 
     <div class="container mx-auto bg-white shadow-2xl border border-gray-300 p-8 max-w-4xl">
         
-        <div class="space-y-2">
+        <div class="space-y-4">
             <h1 class="text-2xl font-black text-center uppercase border-b-4 border-black pb-2 mb-4">Výchozí revize spalinové cesty</h1>
 
             <div class="grid grid-cols-2 gap-4">
-                <div><label>Evidenční číslo:</label><input type="text" value="0126" class="w-full"></div>
-                <div><label>Datum vystavení zprávy:</label><input type="date" id="datumVystaveni" class="w-full"></div>
+                <div><label>Evidenční číslo:</label><input type="text" value="0126" class="w-full font-bold"></div>
+                <div class="text-right"><label>Datum vystavení zprávy:</label><input type="date" id="datumVystaveni" class="w-full text-right"></div>
             </div>
 
             <div><label>Datum provedení revize spalinové cesty:</label><input type="date" id="datumRevize" class="w-full"></div>
 
             <h2 class="section-title uppercase">Údaje o revizním technikovi spalinových cest</h2>
-            <div class="fixed-data space-y-2 mt-2">
+            <div class="fixed-data mt-2">
                 <p><strong>Název, adresa a IČ:</strong> Kominictví Černý s.r.o., Na Spádu 320/6, 40011 Ústí nad Labem, IČO: 08555583, DIČ: CZ08555583</p>
                 <p><strong>Jméno a příjmení technika:</strong> Černý Karel, tel. 730 610 120, email: cerny@topeni-usti.cz</p>
                 <p><strong>Číslo osvědčení:</strong> MV_2204464/36-024-H</p>
             </div>
 
-            <div><label>OBJEDNAVATEL:</label><textarea rows="2">Liška Vít, tel: 723831447, email: danutaliskova@gmail.com, 40001 Ústí nad Labem, Koněvova 1789/30</textarea></div>
-            <div><label>REVIZE PROVEDENA U:</label><textarea rows="2">Liška Vít, 40001 Ústí nad Labem, Koněvova 1789/30, 2. patro</textarea></div>
-            <div><label>ADRESA OBJEKTU:</label><input type="text" value="40001 Ústí nad Labem, Koněvova 1789/30" class="w-full"></div>
-
-            <div>
-                <label>Specifikace spalinové cesty:</label>
-                <textarea rows="3">Systémový odvod spalin RICOM GAS koaxiální. Spotřebič typu C. Palivo plynné. Luna Compact 24. Výkon 24kW.</textarea>
+            <div class="space-y-4">
+                <div><label>OBJEDNAVATEL:</label><textarea rows="2">Liška Vít, tel: 723831447, email: danutaliskova@gmail.com, 40001 Ústí nad Labem, Koněvova 1789/30</textarea></div>
+                <div><label>REVIZE PROVEDENA U:</label><textarea rows="2">Liška Vít, Koněvova 1789/30, 2. patro</textarea></div>
+                <div><label>ADRESA OBJEKTU, ve kterém byla provedena revize:</label><input type="text" value="40001 Ústí nad Labem, Koněvova 1789/30" class="w-full"></div>
             </div>
+
+            <div class="space-y-2">
+                <label>Specifikace spalinové cesty, paliva a spotřebiče:</label>
+                <textarea rows="3">Systémový odvod spalin RICOM GAS koaxiální včetně kouřovodu a spotřebiče. Spotřebič typu C. Palivo plynné. Stacionární spotřebič. Kondenzační spotřebič. Luna Compact 24. Výkon 24kW.</textarea>
+            </div>
+
+            <div><label>Určení výrobce komínových vložek a IČ:</label><textarea rows="1">RICOM gas s.r.o., Na Bělidle 1135, Liberec, IČO 25414852</textarea></div>
+            <div><label>Doklad o posouzení o vlastnostech (Prohlášení):</label><textarea rows="1">Prohlášení o vlastnostech č. 113</textarea></div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div><label>Nedostatky odstraněné na místě:</label><input type="text" value="Žádné" class="w-full"></div>
                 <div><label>Nedostatky neodstraněné na místě:</label><input type="text" value="Žádné" class="w-full"></div>
+                <div class="col-span-2"><label>Termín odstranění nedostatků:</label><input type="text" value="Žádný termín" class="w-full"></div>
             </div>
 
-            <div class="border-4 border-black p-4 text-center mt-6">
+            <div id="zaviraciBlok" class="border-4 border-black p-4 text-center mt-6 transition-colors duration-300">
                 <h2 class="font-bold text-lg uppercase underline mb-1">ZÁVĚR</h2>
-                <div class="flex justify-center space-x-4 font-black text-sm">
-                    <span class="border-2 border-black px-4 py-1 bg-gray-100 uppercase">VYHOVUJE</span>
+                <p class="text-xs font-bold mb-3 text-gray-700 uppercase tracking-tight">Spalinová cesta z hlediska bezpečného a spolehlivého provozu</p>
+                
+                <div class="flex flex-col md:flex-row justify-center items-center gap-2 no-print">
+                    <button type="button" onclick="nastavVysledek('vyhovuje', this)" class="vysledek-btn border-2 border-black px-4 py-1 font-black text-xs uppercase bg-white">VYHOVUJE</button>
+                    <button type="button" onclick="nastavVysledek('podminecne', this)" class="vysledek-btn border-2 border-gray-200 px-4 py-1 font-black text-xs uppercase bg-white text-gray-400">VYHOVUJE PO ODSTRANĚNÍ...</button>
+                    <button type="button" onclick="nastavVysledek('nevyhovuje', this)" class="vysledek-btn border-2 border-gray-200 px-4 py-1 font-black text-xs uppercase bg-white text-gray-400">NEVYHOVUJE</button>
                 </div>
+
+                <div class="hidden print-block mt-2">
+                    <p id="tiskVysledek" class="text-xl font-black uppercase underline"></p>
+                </div>
+                <p class="text-[9px] mt-2 italic text-gray-400">*) Nehodící se škrtne</p>
             </div>
+            <p class="text-[9px] font-bold italic pt-2 uppercase">Nedílnou součástí je technický protokol revize spalinové cesty.</p>
         </div>
 
         <div class="page-break pt-10">
-            <h1 class="text-xl font-bold uppercase border-b-2 border-black mb-6">Technický protokol revizní spalinové cesty č. 77437671</h1>
+            <h1 class="text-xl font-bold uppercase border-b-2 border-black mb-6">Technický protokol revizní spalinové cesty</h1>
+            
             <div class="space-y-2">
-                <section><h2 class="section-title text-sm uppercase">F. Zhotovitel konstrukce spalinové cesty</h2>
-                <div class="fixed-data">Kominictví Černý s.r.o., IČO: 08555583, Černý Karel</div></section>
-                
-                <section><h2 class="section-title">P. Doplňující podklady, fotodokumentace, poznámky</h2>
-                <textarea rows="2">Revizní zprávu naleznete v systému CESC na www.cesc.cz.</textarea></section>
+                <section><h2 class="section-title">A. Projektová dokumentace</h2><textarea rows="1">Projektová dokumentace nepředložena. Provedení komína nemohlo být posouzeno podle projektové dokumentace.</textarea></section>
+                <section><h2 class="section-title">B. Popis stavby</h2><textarea rows="1">Bytový dům, počet podlaží 2, sklep ano. Střecha sedlová. Konstrukce cihlová.</textarea></section>
+                <section><h2 class="section-title">C. Popis připojeného spotřebiče paliv</h2><textarea rows="1">Počet spotřebičů 1. Luna Compact 24. Výkon 24kW. Výrobní číslo 252141529. Teplota spalin 85°C.</textarea></section>
+                <section><h2 class="section-title">D. Popis kouřovodu</h2><textarea rows="1">Koaxiální kouřovod plast. Průměr 60/100mm, rozvinutá délka 1m.</textarea></section>
+                <section><h2 class="section-title">E. Popis komínu</h2><textarea rows="1">Systémový odvod spalin venkovní stěnou RICOM GAS koaxiální. Pevná plastová vložka.</textarea></section>
+                <section><h2 class="section-title">F. Zhotovitel konstrukce spalinové cesty</h2><div class="fixed-data">Kominictví Černý s.r.o., IČO: 08555583, Černý Karel, tel: 730 610 120</div></section>
+                <section><h2 class="section-title">G. Zatřídění spalinových cest podle ČSN</h2><textarea rows="1">EN 14471 T120 P1 O W1 000 E/I E L1</textarea></section>
+                <section><h2 class="section-title">H. Umístění komínového štítku</h2><textarea rows="1">Součástí revizní zprávy.</textarea></section>
+                <section><h2 class="section-title">I. Výpočet spalinové cesty</h2><textarea rows="1">Velikost spalinové cesty byla stanovena výrobcem spotřebiče uvedeným v technické dokumentaci.</textarea></section>
+                <section><h2 class="section-title">J. Bezpečná vzdálenost od hořlavých látek</h2><textarea rows="1">Předepsaná minimální vzdálenost od pláště komína je 0mm.</textarea></section>
+                <section><h2 class="section-title">K. Požární bezpečnost stavby</h2><textarea rows="1">Z hlediska požární bezpečnosti je spalinová cesta bezpečná.</textarea></section>
+                <section><h2 class="section-title">L. Bezpečnost práce</h2><textarea rows="1">Jedná se o kondenzační kotel s odvodem spalin přes fasádu.</textarea></section>
+                <section><h2 class="section-title">M. Přívod spalovacího vzduchu</h2><textarea rows="1">Zajištěn koaxiální vzduchospalinovou cestou z venkovního prostředí.</textarea></section>
+                <section><h2 class="section-title">N. Odsávací elektrické ventilátory, digestoře</h2><textarea rows="1">V době kontroly nenainstalovány.</textarea></section>
+                <section><h2 class="section-title">O. Zkouška těsnosti spalinové cesty</h2><textarea rows="1">Těsnost garantována výrobcem komínových vložek a dodavatelem spalinové cesty.</textarea></section>
+                <section><h2 class="section-title">P. Doplňující podklady, fotodokumentace, poznámky</h2><textarea rows="2">Revizní zprávu a další podklady naleznete v systému CESC na adrese www.cesc.cz.</textarea></section>
             </div>
         </div>
 
         <div class="mt-8 text-center no-print">
-            <button onclick="window.print()" class="bg-blue-600 text-white px-10 py-4 rounded-full font-bold shadow-xl hover:bg-blue-700 transition uppercase text-sm">
-                Vytisknout zprávu
-            </button>
+            <button onclick="window.print()" class="bg-blue-600 text-white px-10 py-4 rounded-full font-bold shadow-xl hover:bg-blue-700 transition uppercase text-sm">Vytisknout zprávu</button>
         </div>
     </div>
 
     <script>
-        // Automatické nastavení dnešního data při načtení stránky
+        function nastavVysledek(typ, element) {
+            const blok = document.getElementById('zaviraciBlok');
+            const tisk = document.getElementById('tiskVysledek');
+            const tlacitka = document.querySelectorAll('.vysledek-btn');
+
+            tlacitka.forEach(btn => {
+                btn.classList.remove('bg-black', 'text-white', 'border-black');
+                btn.classList.add('border-gray-200', 'text-gray-400');
+            });
+
+            element.classList.remove('border-gray-200', 'text-gray-400');
+            element.classList.add('bg-black', 'text-white', 'border-black');
+
+            if (typ === 'vyhovuje') {
+                blok.style.backgroundColor = "#f0fdf4";
+                tisk.innerText = "VYHOVUJE";
+            } else if (typ === 'podminecne') {
+                blok.style.backgroundColor = "#fffbeb";
+                tisk.innerText = "VYHOVUJE PO ODSTRANĚNÍ ZJIŠTĚNÝCH NEDOSTATKŮ";
+            } else if (typ === 'nevyhovuje') {
+                blok.style.backgroundColor = "#fef2f2";
+                tisk.innerText = "NEVYHOVUJE";
+            }
+        }
+
         window.onload = function() {
             const dnes = new Date().toISOString().split('T')[0];
             document.getElementById('datumVystaveni').value = dnes;
             document.getElementById('datumRevize').value = dnes;
+            nastavVysledek('vyhovuje', document.querySelector('.vysledek-btn'));
         };
     </script>
+    <style>
+        @media print { .print-block { display: block !important; } }
+    </style>
 </body>
 </html>
