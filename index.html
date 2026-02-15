@@ -3,118 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revizní systém - Zpráva o revizi</title>
+    <title>Výchozí revize spalinové cesty</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Styl pro rozdělení stránek při tisku */
+        @media print {
+            .page-break { page-break-before: always; }
+            .no-print { display: none; }
+            body { background: white; }
+            .container { box-shadow: none; border: none; width: 100%; max-width: 100%; margin: 0; padding: 0; }
+        }
+        .section-title { font-weight: bold; background-color: #f3f4f6; padding: 4px 8px; margin-top: 15px; border-left: 4px solid #2563eb; }
+        input[type="text"], input[type="date"], textarea { width: 100%; border: 1px solid #d1d5db; border-radius: 4px; padding: 4px 8px; font-size: 0.875rem; }
+    </style>
 </head>
-<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+<body class="bg-gray-100 p-4 md:p-8">
 
-    <div class="container mx-auto my-10 p-6 bg-white max-w-4xl shadow-xl rounded-lg">
+    <div class="container mx-auto bg-white shadow-2xl border border-gray-300 p-8 max-w-4xl">
         
-        <div class="border-b-2 border-blue-600 pb-4 mb-6 flex justify-between items-center">
-            <div>
-                <h1 class="text-2xl font-bold text-gray-800 uppercase">Zpráva o revizi spalinové cesty</h1>
-                <p class="text-sm text-gray-600">Dle platných předpisů ČR</p>
+        <div class="space-y-4">
+            <h1 class="text-2xl font-black text-center uppercase border-b-4 border-black pb-2">Výchozí revize spalinové cesty</h1> [cite: 1, 2]
+
+            <div class="grid grid-cols-2 gap-4 text-sm font-bold">
+                <div>Evidenční číslo: <input type="text" value="0126"></div> [cite: 4]
+                <div class="text-right">Číslo zprávy: <input type="text" value="77437671" class="w-32"></div> [cite: 3]
             </div>
-            <div class="text-right">
-                <p class="font-bold">Číslo zprávy: <span class="text-blue-600">77437671</span></p>
-                <p class="text-sm text-gray-500">Evidenční číslo: 0126</p>
+
+            <div class="grid grid-cols-2 gap-4 text-sm">
+                <div>Datum vystavení zprávy: <input type="date" value="2026-01-15"></div> [cite: 5]
+                <div>Datum provedení revize spalinové cesty: <input type="date" value="2026-01-15"></div> [cite: 6]
+            </div>
+
+            <h2 class="section-title">Údaje o revizním technikovi spalinových cest</h2> [cite: 7]
+            <div class="text-xs space-y-2">
+                <p><strong>Název, adresa a IČ právnické nebo podnikající fyzické osoby:</strong><br>
+                Kominictví Černý s.r.o., 40011 Ústí nad Labem, Na Spádu 320/6, IČO: 08555583, DIČ: CZ08555583, tel: 730 610 120, email: cerny@topeni-usti.cz</p> [cite: 8, 9]
+                
+                <p><strong>Jméno a příjmení revizního technika spalinových cest, který revizi spalinové cesty provedl:</strong><br>
+                Černý Karel, tel. 730 610 120, cerny@topeni-usti.cz</p> [cite: 10]
+                
+                <p><strong>Číslo osvědčení revizního technika spalinových cest:</strong> MV_2204464/36-024-H</p> [cite: 11]
+            </div>
+
+            <div class="grid grid-cols-1 gap-4">
+                <div><h2 class="font-bold text-sm">OBJEDNAVATEL:</h2><textarea class="h-16">Liška Vít, tel: 723831447, email: danutaliskova@gmail.com, 40001 Ústí nad Labem, Koněvova 1789/30</textarea></div> [cite: 12, 13]
+                <div><h2 class="font-bold text-sm">REVIZE PROVEDENA U:</h2><textarea class="h-16">Liška Vít, 40001 Ústí nad Labem, Koněvova 1789/30, 2. patro</textarea></div> [cite: 14]
+            </div>
+
+            <div class="space-y-2">
+                <p class="text-xs font-bold uppercase">ADRESA OBJEKTU, ve kterém byla provedena revize spalinové cesty:</p> [cite: 15]
+                <input type="text" value="40001 Ústí nad Labem, Koněvova 1789/30"> [cite: 16]
+            </div>
+
+            <div class="space-y-2">
+                <p class="text-xs font-bold uppercase">Specifikace spalinové cesty, u které byla provedena revize včetně druhu paliva a druhu, typu, provedení a výkonu připojeného spotřebiče paliv:</p> [cite: 17]
+                <textarea class="h-20 text-xs">Systémový odvod spalin venkovní stěnou RICOM GAS koaxiální včetně kouřovodu a spotřebiče. Spotřebič typu C. Palivo plynné. Stacionární spotřebič. Kondenzační spotřebič. Luna Compact 24. Výkon 24kW.</textarea> [cite: 17, 18]
+            </div>
+
+            <div class="space-y-2">
+                <p class="text-xs font-bold uppercase">Určení výrobce komínových vložek, systémového komínu nebo komponentů pro individuální komín včetně IČ:</p> [cite: 19]
+                <input type="text" value="RICOM gas s.r.o., IČO 25414852" class="text-xs"> [cite: 19]
+            </div>
+
+            <div class="space-y-2">
+                <p class="text-xs font-bold uppercase">Doklad o posouzení o vlastnostech systémového komína, komponentů individuálního komínu nebo komínových vložek:</p> [cite: 20]
+                <input type="text" value="Prohlášení o vlastnostech č. 113" class="text-xs"> [cite: 20]
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs italic">
+                <div>Zjištěné nedostatky, které byly odstraněny na místě: <input type="text" value="Žádné"></div> [cite: 21]
+                <div>Zjištěné nedostatky, které nebyly odstraněny na místě: <input type="text" value="Žádné"></div> [cite: 22]
+                <div class="col-span-2">Termín odstranění nedostatků: <input type="text" value="Žádný termín"></div> [cite: 22]
+            </div>
+
+            <div class="border-2 border-black p-4 text-center space-y-2">
+                <h2 class="font-bold text-lg uppercase underline">ZÁVĚR</h2> [cite: 23]
+                <p class="text-sm">Spalinová cesta z hlediska bezpečného a spolehlivého provozu</p> [cite: 24]
+                <div class="flex justify-center space-x-4 font-black">
+                    <span class="border-2 border-black px-4 py-1">VYHOVUJE</span> [cite: 25]
+                    <span class="opacity-30">VYHOVUJE PO ODSTRANĚNÍ ZJIŠTĚNÝCH NEDOSTATKŮ</span> [cite: 26]
+                    <span class="opacity-30">NEVYHOVUJE *)</span> [cite: 27]
+                </div>
+                <p class="text-[10px] italic">*) Nehodící se škrtne</p> [cite: 28]
+            </div>
+
+            <p class="text-[10px] font-bold italic border-t pt-2">Nedílnou součástí této zprávy o revizi spalinové cesty je technický protokol revize spalinové cesty.</p> [cite: 29]
+        </div>
+
+        <div class="page-break pt-10">
+            <h1 class="text-xl font-bold uppercase border-b-2 border-black mb-6">Technický protokol revizní spalinové cesty č. 77437671</h1> [cite: 3, 36]
+            
+            <div class="space-y-6">
+                <section>
+                    <h2 class="section-title">A. Projektová dokumentace</h2> [cite: 37]
+                    <textarea class="h-12 text-xs">Projektová dokumentace nepředložena. Původní revizní zpráva nepředložena.</textarea> [cite: 38]
+                </section>
+
+                <section>
+                    <h2 class="section-title">B. Popis stavby</h2> [cite: 39]
+                    <textarea class="h-12 text-xs">Bytový dům, počet podlaží 2, sklep ano. Střecha sedlová. Konstrukce cihlová.</textarea> [cite: 40]
+                </section>
+
+                <section>
+                    <h2 class="section-title">C. Popis připojeného spotřebiče paliv</h2> [cite: 42]
+                    <textarea class="h-12 text-xs">Počet spotřebičů 1. Luna Compact 24. Výkon 24kW. Teplota spalin 85°C. Výrobní číslo 252141529.</textarea> [cite: 43]
+                </section>
+
+                <section>
+                    <h2 class="section-title">D. Popis kouřovodu</h2> [cite: 45]
+                    <textarea class="h-12 text-xs">Koaxiální kouřovod v provedení plast. Průměr 60mm, rozvinutá délka 1m.</textarea> [cite: 46]
+                </section>
+
+                <section>
+                    <h2 class="section-title">E. Popis komínu</h2> [cite: 48]
+                    <textarea class="h-12 text-xs">Systémový odvod spalin venkovní stěnou RICOM GAS koaxiální. Pevná plastová vložka.</textarea> [cite: 49]
+                </section>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                    <section><h2 class="section-title text-[10px]">F. Zhotovitel konstrukce spalinové cesty</h2><textarea class="h-8 text-[10px]">Kominictví Černý s.r.o., IČO: 08555583</textarea></section> [cite: 52, 53]
+                    <section><h2 class="section-title text-[10px]">G. Zatřídění spalinových cest podle ČSN</h2><textarea class="h-8 text-[10px]">EN 14471 T120 P1 O W1 000 E/I E L1</textarea></section> [cite: 55, 56]
+                    <section><h2 class="section-title text-[10px]">H. Umístění komínového štítku</h2><textarea class="h-8 text-[10px]">Součástí revizní zprávy.</textarea></section> [cite: 57, 58]
+                    <section><h2 class="section-title text-[10px]">I. Výpočet spalinové cesty</h2><textarea class="h-8 text-[10px]">Stanovena výrobcem spotřebiče v technické dokumentaci.</textarea></section> [cite: 59, 60]
+                    <section><h2 class="section-title text-[10px]">J. Bezpečná vzdálenost od hořlavých látek</h2><textarea class="h-8 text-[10px]">Minimální vzdálenost od pláště komína je 0mm.</textarea></section> [cite: 62, 63]
+                    <section><h2 class="section-title text-[10px]">K. Požární bezpečnost stavby</h2><textarea class="h-8 text-[10px]">Z hlediska požární bezpečnosti je spalinová cesta bezpečná.</textarea></section> [cite: 66, 67]
+                    <section><h2 class="section-title text-[10px]">L. Bezpečnost práce</h2><textarea class="h-8 text-[10px]">Kondenzační kotel s odvodem spalin přes fasádu.</textarea></section> [cite: 68, 69]
+                    <section><h2 class="section-title text-[10px]">M. Přívod spalovacího vzduchu</h2><textarea class="h-8 text-[10px]">Zajištěn koaxiální vzduchospalinovou cestou.</textarea></section> [cite: 70, 71]
+                    <section><h2 class="section-title text-[10px]">N. Odsávací ventilátory, digestoře</h2><textarea class="h-8 text-[10px]">V době kontroly nenainstalovány.</textarea></section> [cite: 72, 73]
+                    <section><h2 class="section-title text-[10px]">O. Zkouška těsnosti spalinové cesty</h2><textarea class="h-8 text-[10px]">Těsnost garantována výrobcem komínových vložek.</textarea></section> [cite: 74, 75]
+                </div>
+
+                <section>
+                    <h2 class="section-title">P. Doplňující podklady, fotodokumentace, poznámky</h2> [cite: 76]
+                    <textarea class="h-16 text-xs italic">Revizní zprávu a další dokumentaci naleznete v systému CESC na www.cesc.cz. Poskytovatel programu neposkytne osobní údaje třetí osobě.</textarea> [cite: 77, 79]
+                </section>
             </div>
         </div>
 
-        <form id="revizeForm" class="space-y-8">
-            
-            <section>
-                <h2 class="text-lg font-semibold bg-blue-50 p-2 border-l-4 border-blue-600 mb-4">Údaje o revizním technikovi</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-xs font-bold text-gray-700 uppercase">Jméno technika</label>
-                        <input type="text" value="Černý Karel" class="w-full border rounded p-2 bg-gray-50" readonly>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold text-gray-700 uppercase">Číslo osvědčení</label>
-                        <input type="text" value="MV_2204464/36-024-H" class="w-full border rounded p-2 bg-gray-50" readonly>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="text-lg font-semibold bg-blue-50 p-2 border-l-4 border-blue-600 mb-4">Objednatel a místo revize</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="col-span-2">
-                        <label class="block text-xs font-bold text-gray-700 uppercase">Jméno majitele / Objednatel</label>
-                        <input type="text" placeholder="např. Liška Vít" class="w-full border rounded p-2 focus:ring-2 focus:ring-blue-400 outline-none">
-                    </div>
-                    <div class="col-span-2">
-                        <label class="block text-xs font-bold text-gray-700 uppercase">Adresa objektu</label>
-                        <input type="text" placeholder="ulice, č.p., obec" class="w-full border rounded p-2 focus:ring-2 focus:ring-blue-400 outline-none">
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="text-lg font-semibold bg-blue-50 p-2 border-l-4 border-blue-600 mb-4">C. Popis připojeného spotřebiče paliv</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div class="md:col-span-2">
-                        <label class="block text-xs font-bold text-gray-700 uppercase">Typ a výrobce spotřebiče</label>
-                        <input type="text" placeholder="např. Luna Compact 24" class="w-full border rounded p-2 focus:ring-2 focus:ring-blue-400 outline-none">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold text-gray-700 uppercase">Výkon (kW)</label>
-                        <input type="number" placeholder="24" class="w-full border rounded p-2 focus:ring-2 focus:ring-blue-400 outline-none">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold text-gray-700 uppercase">Druh paliva</label>
-                        <select class="w-full border rounded p-2 focus:ring-2 focus:ring-blue-400 outline-none">
-                            <option>Plynné (GZ)</option>
-                            <option>Pevné</option>
-                            <option>Kapalné</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold text-gray-700 uppercase">Provedení</label>
-                        <input type="text" value="Kondenzační - Typ C" class="w-full border rounded p-2 bg-gray-50" readonly>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="text-lg font-semibold bg-blue-50 p-2 border-l-4 border-blue-600 mb-4">D. Popis spalinové cesty</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-xs font-bold text-gray-700 uppercase">Materiál kouřovodu</label>
-                        <input type="text" placeholder="např. Plast (RICOM GAS)" class="w-full border rounded p-2 focus:ring-2 focus:ring-blue-400 outline-none">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold text-gray-700 uppercase">Průměr (mm)</label>
-                        <input type="text" placeholder="60/100" class="w-full border rounded p-2 focus:ring-2 focus:ring-blue-400 outline-none">
-                    </div>
-                </div>
-            </section>
-
-            <section class="bg-gray-50 p-4 border-2 border-dashed border-gray-300 rounded-lg text-center">
-                <h2 class="text-xl font-bold mb-4">ZÁVĚR REVIZE</h2>
-                <div class="flex justify-center space-x-6">
-                    <label class="inline-flex items-center cursor-pointer">
-                        <input type="radio" name="vysledek" value="vyhovuje" class="hidden peer" checked>
-                        <span class="px-6 py-2 rounded-full border-2 border-green-500 text-green-500 font-bold peer-checked:bg-green-500 peer-checked:text-white transition">VYHOVUJE</span>
-                    </label>
-                    <label class="inline-flex items-center cursor-pointer">
-                        <input type="radio" name="vysledek" value="nevyhovuje" class="hidden peer">
-                        <span class="px-6 py-2 rounded-full border-2 border-red-500 text-red-500 font-bold peer-checked:bg-red-500 peer-checked:text-white transition">NEVYHOVUJE</span>
-                    </label>
-                </div>
-            </section>
-
-            <div class="flex flex-col items-center pt-6">
-                <button type="button" onclick="generovatRevizi()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-10 rounded-full shadow-lg transition transform hover:scale-105">
-    Uložit a vygenerovat PDF
-</button>
-                <p class="mt-4 text-xs text-gray-400">Data budou archivována v Centrální evidenci spalinových cest.</p>
-            </div>
-
-        </form>
+        <div class="mt-10 text-center no-print">
+            <button onclick="window.print()" class="bg-black text-white px-10 py-4 rounded-full font-bold shadow-xl hover:scale-105 transition">
+                VYTISKNOUT REVIZNÍ ZPRÁVU (2 STRANY)
+            </button>
+        </div>
     </div>
-<script src="script.js"></script>
+
 </body>
 </html>
-
