@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revizní systém - Zpráva o revizi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+    <div class="container mx-auto my-10 p-6 bg-white max-w-4xl shadow-xl rounded-lg">
+        
+        <div class="border-b-2 border-blue-600 pb-4 mb-6 flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-bold text-gray-800 uppercase">Zpráva o revizi spalinové cesty</h1>
+                <p class="text-sm text-gray-600">Dle platných předpisů ČR</p>
+            </div>
+            <div class="text-right">
+                <p class="font-bold">Číslo zprávy: <span class="text-blue-600">77437671</span></p>
+                <p class="text-sm text-gray-500">Evidenční číslo: 0126</p>
+            </div>
+        </div>
+
+        <form id="revizeForm" class="space-y-8">
+            
+            <section>
+                <h2 class="text-lg font-semibold bg-blue-50 p-2 border-l-4 border-blue-600 mb-4">Údaje o revizním technikovi</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase">Jméno technika</label>
+                        <input type="text" value="Černý Karel" class="w-full border rounded p-2 bg-gray-50" readonly>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase">Číslo osvědčení</label>
+                        <input type="text" value="MV_2204464/36-024-H" class="w-full border rounded p-2 bg-gray-50" readonly>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-lg font-semibold bg-blue-50 p-2 border-l-4 border-blue-600 mb-4">Objednatel a místo revize</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="col-span-2">
+                        <label class="block text-xs font-bold text-gray-700 uppercase">Jméno majitele / Objednatel</label>
+                        <input type="text" placeholder="např. Liška Vít" class="w-full border rounded p-2 focus:ring-2 focus:ring-blue-400 outline-none">
+                    </div>
+                    <div class="col-span-2">
+                        <label class="block text-xs font-bold text-gray-700 uppercase">Adresa objektu</label>
+                        <input type="text" placeholder="ulice, č.p., obec" class="w-full border rounded p-2 focus:ring-2 focus:ring-blue-400 outline-none">
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-lg font-semibold bg-blue-50 p-2 border-l-4 border-blue-600 mb-4">C. Popis připojeného spotřebiče paliv</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="md:col-span-2">
+                        <label class="block text-xs font-bold text-gray-700 uppercase">Typ a výrobce spotřebiče</label>
+                        <input type="text" placeholder="např. Luna Compact 24" class="w-full border rounded p-2 focus:ring-2 focus:ring-blue-400 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase">Výkon (kW)</label>
+                        <input type="number" placeholder="24" class="w-full border rounded p-2 focus:ring-2 focus:ring-blue-400 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase">Druh paliva</label>
+                        <select class="w-full border rounded p-2 focus:ring-2 focus:ring-blue-400 outline-none">
+                            <option>Plynné (GZ)</option>
+                            <option>Pevné</option>
+                            <option>Kapalné</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase">Provedení</label>
+                        <input type="text" value="Kondenzační - Typ C" class="w-full border rounded p-2 bg-gray-50" readonly>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-lg font-semibold bg-blue-50 p-2 border-l-4 border-blue-600 mb-4">D. Popis spalinové cesty</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase">Materiál kouřovodu</label>
+                        <input type="text" placeholder="např. Plast (RICOM GAS)" class="w-full border rounded p-2 focus:ring-2 focus:ring-blue-400 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase">Průměr (mm)</label>
+                        <input type="text" placeholder="60/100" class="w-full border rounded p-2 focus:ring-2 focus:ring-blue-400 outline-none">
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-gray-50 p-4 border-2 border-dashed border-gray-300 rounded-lg text-center">
+                <h2 class="text-xl font-bold mb-4">ZÁVĚR REVIZE</h2>
+                <div class="flex justify-center space-x-6">
+                    <label class="inline-flex items-center cursor-pointer">
+                        <input type="radio" name="vysledek" value="vyhovuje" class="hidden peer" checked>
+                        <span class="px-6 py-2 rounded-full border-2 border-green-500 text-green-500 font-bold peer-checked:bg-green-500 peer-checked:text-white transition">VYHOVUJE</span>
+                    </label>
+                    <label class="inline-flex items-center cursor-pointer">
+                        <input type="radio" name="vysledek" value="nevyhovuje" class="hidden peer">
+                        <span class="px-6 py-2 rounded-full border-2 border-red-500 text-red-500 font-bold peer-checked:bg-red-500 peer-checked:text-white transition">NEVYHOVUJE</span>
+                    </label>
+                </div>
+            </section>
+
+            <div class="flex flex-col items-center pt-6">
+                <button type="button" onclick="alert('Data byla připravena k uložení do systému.')" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-10 rounded-full shadow-lg transition transform hover:scale-105">
+                    Uložit a vygenerovat PDF
+                </button>
+                <p class="mt-4 text-xs text-gray-400">Data budou archivována v Centrální evidenci spalinových cest.</p>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
