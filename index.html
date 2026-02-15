@@ -9,13 +9,15 @@
         @media print {
             .page-break { page-break-before: always; }
             .no-print { display: none; }
-            body { background: white; font-size: 11pt; }
+            body { background: white; font-size: 10pt; }
             .container { box-shadow: none; border: none; width: 100%; max-width: 100%; margin: 0; padding: 0; }
             textarea { border: none !important; resize: none; overflow: hidden; }
+            input { border: none !important; }
         }
-        .section-title { font-weight: bold; background-color: #f3f4f6; padding: 4px 8px; margin-top: 10px; border-left: 4px solid #000; font-size: 0.9rem; }
-        textarea { width: 100%; border: 1px solid #d1d5db; border-radius: 4px; padding: 6px; font-size: 0.85rem; line-height: 1.4; }
-        input[type="text"] { border: 1px solid #d1d5db; border-radius: 4px; padding: 4px; }
+        .section-title { font-weight: bold; background-color: #f3f4f6; padding: 4px 8px; margin-top: 10px; border-left: 4px solid #000; font-size: 0.85rem; }
+        textarea { width: 100%; border: 1px solid #d1d5db; border-radius: 4px; padding: 6px; font-size: 0.8rem; line-height: 1.4; background-color: #fff; }
+        input[type="text"] { border: 1px solid #d1d5db; border-radius: 4px; padding: 4px; font-size: 0.8rem; }
+        label { font-size: 0.75rem; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 2px; }
     </style>
 </head>
 <body class="bg-gray-100 p-4 md:p-8">
@@ -25,37 +27,23 @@
         <div class="space-y-4">
             <h1 class="text-2xl font-black text-center uppercase border-b-4 border-black pb-2">Výchozí revize spalinové cesty</h1>
 
-            <div class="grid grid-cols-2 gap-4 text-sm font-bold">
-                <div>Evidenční číslo: <input type="text" value="0126" class="w-32"></div>
-                <div class="text-right">Datum vystavení zprávy: <input type="text" value="15.1.2026" class="w-32"></div>
+            <div class="grid grid-cols-2 gap-4">
+                <div><label>Evidenční číslo:</label><input type="text" value="0126" class="w-full"></div>
+                <div class="text-right"><label>Číslo zprávy:</label><input type="text" value="77437671" class="w-32 text-right"></div>
             </div>
 
-            <div class="text-sm font-bold">
-                Datum provedení revize spalinové cesty: <input type="text" value="15.1.2026" class="w-32">
+            <div class="grid grid-cols-2 gap-4">
+                <div><label>Datum vystavení zprávy:</label><input type="text" value="15.1.2026" class="w-full"></div>
+                <div><label>Datum provedení revize:</label><input type="text" value="15.1.2026" class="w-full"></div>
             </div>
 
             <h2 class="section-title uppercase">Údaje o revizním technikovi spalinových cest</h2>
-            <div class="text-xs space-y-2 p-2 border rounded mt-2">
-                <p><strong>Název, adresa a IČ právnické nebo podnikající fyzické osoby:</strong><br>
-                Kominictví Černý s.r.o., 40011 Ústí nad Labem, Na Spádu 320/6, IČO: 08555583, DIČ: CZ08555583, tel: 730 610 120, email: cerny@topeni-usti.cz</p>
-                
-                <p><strong>Jméno a příjmení revizního technika spalinových cest, který revizi spalinové cesty provedl:</strong><br>
-                Černý Karel, tel. 730 610 120, cerny@topeni-usti.cz</p>
-                
-                <p><strong>Číslo osvědčení revizního technika spalinových cest:</strong> MV_2204464/36-024-H</p>
+            <div class="text-[10px] space-y-2 p-3 border rounded bg-gray-50">
+                <p><strong>Název, adresa a IČ:</strong> Kominictví Černý s.r.o., Na Spádu 320/6, Ústí n. L., IČO: 08555583</p>
+                <p><strong>Revizní technik:</strong> Černý Karel, tel. 730 610 120, email: cerny@topeni-usti.cz</p>
+                <p><strong>Číslo osvědčení:</strong> MV_2204464/36-024-H</p>
             </div>
 
             <div class="space-y-4">
-                <div><h2 class="font-bold text-sm uppercase">OBJEDNAVATEL:</h2><textarea rows="2">Liška Vít, tel: 723831447, email: danutaliskova@gmail.com, 40001 Ústí nad Labem, Koněvova 1789/30</textarea></div>
-                <div><h2 class="font-bold text-sm uppercase">REVIZE PROVEDENA U:</h2><textarea rows="2">Liška Vít, Koněvova 1789/30, 2. patro</textarea></div>
-                <div><h2 class="font-bold text-sm uppercase">ADRESA OBJEKTU, ve kterém byla provedena revize spalinové cesty:</h2><input type="text" value="40001 Ústí nad Labem, Koněvova 1789/30" class="w-full"></div>
-            </div>
-
-            <div class="space-y-2">
-                <p class="text-xs font-bold uppercase">Specifikace spalinové cesty, u které byla provedena revize včetně druhu paliva a druhu, typu, provedení a výkonu připojeného spotřebiče paliv:</p>
-                <textarea rows="3">Systémový odvod spalin venkovní stěnou RICOM GAS koaxiální včetně kouřovodu a spotřebiče. Spotřebič typu C. Palivo plynné. Stacionární spotřebič. Kondenzační spotřebič. Luna Compact 24. Výkon 24kW.</textarea>
-            </div>
-
-            <div class="space-y-2 text-xs">
-                <p class="font-bold uppercase">Určení výrobce komínových vložek, systémového komínu nebo komponentů pro individuální komín včetně IČ:</p>
-                <textarea rows="1">RICOM gas s.r.o., 46006 Liberec, Na Bělidle 1135, IČO 25414852
+                <div><label>OBJEDNAVATEL:</label><textarea rows="2">Liška Vít, tel: 723831447, email: danutaliskova@gmail.com, 40001 Ústí nad Labem, Koněvova 1789/30</textarea></div>
+                <div><label>REVIZE PROVEDENA
